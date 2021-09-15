@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
+
+$morado: #A15382;
+$rojo: #F26468;
+$gris-claro: #f1f1f1;
+$gris-oscuro: #3D3D3D;
+$weight1: 100;
+$weight2: 400;
+$weight3: 600;
+$weight4: 700;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(76.05deg, #A25382 2.94%, #F26468 80.59%);
+    nav {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        height: 8vh;
+        width: 100%;
+        /* background-color: $gris-claro; */
+        padding: 0 5vw;
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+
+            img {
+                height: 50%;
+                padding-right: 1%;
+            }
+
+            h1 {
+                color: $gris-claro;
+                font-weight: $weight3;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: $gris-claro;
+                margin-left: 2vw;
+            }
+        }
+    }
+
+    .scroll {
+        background-color: rgba(61, 61, 61, 0.9);
+        transition: 0.4s ease all;
+    }
+
+    .hero {
+        display: flex;
+        width: 100%;
+        padding: 0 5vw;
+        margin-top: 8vh;
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 10vw;
+
+            h1 {
+                color: $gris-claro;
+                font-size: clamp(20px, 4vw, 50px);
+                font-weight: $weight4;
+                padding-bottom: 1%;
+            }
+
+            p {
+                font-weight: $weight3;
+                font-size: clamp(12px, 2vw, 20px);
+                color: $gris-claro;
+                opacity: 0.5;
+            }
+
+            .hero-text-buttons {
+                display: flex;
+                width: 100%;
+                padding-top: 10%;
+
+                #button1 {
+                    text-decoration: none;
+                    background-color: $gris-claro;
+                    color: $morado;
+                    padding: 10px 20px;
+                    border-radius: 100px;
+                    margin-right: 2%;
+                    border: 3px solid $gris-claro;
+                    font-weight: $weight3;
+                    font-size: clamp(11px, 1.8vw, 16px);
+                }
+
+                #button2 {
+                    text-decoration: none;
+                    color: $gris-claro;
+                    padding: 10px 20px;
+                    border-radius: 100px;
+                    border: 3px solid $gris-claro;
+                    font-size: clamp(11px, 1.8vw, 16px);
+                }
+            }
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7vh 0;
+
+            svg {
+                max-width: 770px;
+                width: 40vw;
+                padding: 7vh 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .header {
+        min-height: 100vh;
+
+        .hero {
+            flex-direction: column-reverse;
+
+            .hero-image {
+                padding: 0;
+
+                svg {
+                    max-width: 590px;
+                    width: 80vw;
+                }
+            }
+
+            .hero-text {
+                padding-right: 0;
+                align-items: center;
+
+                h1 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                }
+
+                .hero-text-buttons {
+                    padding-top: 3%;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.nosotros {
+    height: 100vh;
+}
