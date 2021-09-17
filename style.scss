@@ -3,6 +3,7 @@
 $morado: #A15382;
 $rojo: #F26468;
 $gris-claro: #f1f1f1;
+$gris-medio: #7C7C7C;
 $gris-oscuro: #3D3D3D;
 $weight1: 100;
 $weight2: 400;
@@ -24,24 +25,25 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(76.05deg, #A25382 2.94%, #F26468 80.59%);
+
     nav {
         position: fixed;
         display: flex;
         justify-content: space-between;
         height: 8vh;
+        min-height: 70px;
         width: 100%;
-        /* background-color: $gris-claro; */
-        padding: 0 5vw;
 
         .nav-brand {
             display: flex;
             align-items: center;
             height: 100%;
             width: 100%;
+            padding-left: 5vw;
 
             img {
-                height: 50%;
-                padding-right: 1%;
+                height: 40px;
+                padding-right: 15px;
             }
 
             h1 {
@@ -50,9 +52,14 @@ body {
             }
         }
 
+        .toggler {
+            display: none;
+        }
+
         .nav-links {
             display: flex;
             align-items: center;
+            padding-right: 5vw;
 
             a {
                 text-decoration: none;
@@ -89,8 +96,7 @@ body {
             p {
                 font-weight: $weight3;
                 font-size: clamp(12px, 2vw, 20px);
-                color: $gris-claro;
-                opacity: 0.5;
+                color: rgba($color: #F1F1F1, $alpha: 0.5);
             }
 
             .hero-text-buttons {
@@ -136,12 +142,153 @@ body {
     }
 }
 
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $gris-oscuro;
+    flex-wrap: wrap;
+
+    svg {
+        fill: $gris-claro;
+        width: clamp(70px, 20vw, 200px);
+        margin: 2rem 2rem;
+        opacity: 1;
+    }
+}
+
+.nosotros {
+    background-color: $gris-claro;
+    padding: 10vh 5vw;
+
+    .nosotros-regular {
+        display: flex;
+    
+        .texto-nosotros {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+            h1 {
+                font-size: 70px; /* 70px */
+                color: $gris-medio;
+            }
+    
+            p {
+                font-size: 22px;
+                color: rgba($color: #7C7C7C, $alpha: 0.7);
+            }
+        }
+    
+        .svg-nosotros {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5vw;
+    
+            svg {
+                fill: url(#gradient);
+                width: 25vw;
+            }
+        }
+    }
+    
+    .nosotros-inverse {
+        display: flex;
+        flex-direction: row-reverse;
+    
+        .texto-nosotros {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    
+            h1 {
+                font-size: 70px; /* 70px */
+                color: $gris-medio;
+                text-align: right;
+            }
+    
+            p {
+                font-size: 22px;
+                color: rgba($color: #7C7C7C, $alpha: 0.7);
+                text-align: right;
+            }
+        }
+    
+        .svg-nosotros {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5vw;
+    
+            svg {
+                fill: url(#gradient);
+                width: 25vw;
+            }
+        }
+    }
+}
+
 @media (max-width: 990px) {
     .header {
-        min-height: 100vh;
+
+        nav {
+            .nav-brand {
+                z-index: 100;
+                white-space: nowrap;
+            }
+
+            .toggler {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 8vh;
+                min-height: 70px;
+                padding-right: 5vw;
+                z-index: 100;
+
+                .toggler-image {
+                    background: url(images/burgir.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 20px;
+                    width: 30px;
+                }
+            }
+
+            .nav-links {
+                transform: translateX(100%);
+            }
+
+            .active {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                width: 100%;
+                background-color: $gris-oscuro;
+                transform: translateX(0);
+                transition: 0.4s ease all;
+    
+                a {
+                    text-decoration: none;
+                    color: $gris-claro;
+                    font-size: clamp(30px, 10vw, 50px); /* 30px, 7vw, 50px */
+                    font-weight: $weight3;
+                    padding: 2vh 0;
+                }
+            }
+        }
 
         .hero {
             flex-direction: column-reverse;
+            min-height: 92vh;
+            justify-content: center;
+            padding-bottom: 5vh;
 
             .hero-image {
                 padding: 0;
@@ -171,8 +318,4 @@ body {
             }
         }
     }
-}
-
-.nosotros {
-    height: 100vh;
 }
