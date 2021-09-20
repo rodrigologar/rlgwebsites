@@ -28,7 +28,7 @@
                     <a onclick="deToggle()" href="#nosotros">Nosotros</a>
                     <a onclick="deToggle()" href="#servicios">Servicios</a>
                     <a onclick="deToggle()" href="#planes">Planes</a>
-                    <a onclick="deToggle()" href="#">Contacto</a>
+                    <a onclick="deToggle()" href="#contacto">Contacto</a>
                 </div>
             </nav>
             <div class="hero">
@@ -176,7 +176,7 @@
                         <li>Sitio web de una página con hasta 5 secciones</li>
                         <li>1 cambio de información al sitio por mes</li>
                     </ul>
-                    <a href="#">Obtener</a>
+                    <a href="#contacto">Obtener</a>
                 </div>
                 <div class="plan">
                     <h1>Plan Avanzado</h1>
@@ -188,8 +188,60 @@
                         <li>Cambios de información al sitio ilimitados</li>
                         <li>Informe y revisión de estadísticas mensual</li>
                     </ul>
-                    <a href="#">Obtener</a>
+                    <a href="#contacto">Obtener</a>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto">
+        <div class="contacto">
+            <h1>Contáctanos</h1>
+            <p>Completa la forma y nos comunicaremos contigo tan pronto como podamos para comenzar a crear tu sitio web.</p>
+            <div class="form">
+                <form action="https://formspree.io/f/xrgrjypk" method="POST">
+                    <label for="nombre">Nombre</label>
+                    <div class="input">
+                        <input type="text" name="nombre" id="nombre" required>
+                    </div>
+                    <label for="apellido">Apellido</label>
+                    <div class="input">
+                        <input type="text" name="apellido" id="apellido" required>
+                    </div>
+                    <label for="email">Correo</label>
+                    <div class="input">
+                        <input type="email" name="_replyto" id="email" required>
+                    </div>
+                    <label for="telefono">Teléfono</label>
+                    <div class="input">
+                        <input type="tel" name="telefono" id="telefono">
+                    </div>
+                    <label for="extra">¿Qué plan te interesa?</label>
+                    <br>
+                    <textarea name="extra" id="extra" required placeholder="Platicanos un poco más sobre tí y tu empresa para que nos adaptemos a tus necesidades."></textarea>
+                    <div class="submit">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="footer">
+            <h1>contacto@rlgwebsites.com.mx</h1>
+            <h2>Puebla, México</h2>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/rlg.websites/" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 511 511" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M509.602 150.235C508.405 123.084 504.015 104.418 497.725 88.243C491.236 71.074 481.254 55.7027 468.175 42.9244C455.397 29.9473 439.924 19.8635 422.954 13.4763C406.686 7.18656 388.117 2.79586 360.966 1.59875C333.612 0.300252 324.928 0 255.55 0C186.172 0 177.488 0.300252 150.235 1.49736C123.084 2.69447 104.418 7.08908 88.2469 13.3749C71.074 19.8635 55.7027 29.8459 42.9244 42.9244C29.9473 55.7027 19.8674 71.1754 13.4763 88.1455C7.18656 104.418 2.79586 122.983 1.59875 150.134C0.300252 177.488 0 186.172 0 255.55C0 324.928 0.300252 333.612 1.49736 360.864C2.69447 388.016 7.08908 406.682 13.3788 422.857C19.8674 440.026 29.9473 455.397 42.9244 468.175C55.7027 481.153 71.1754 491.236 88.1455 497.624C104.418 503.913 122.983 508.304 150.138 509.501C177.387 510.702 186.075 510.998 255.452 510.998C324.83 510.998 333.514 510.702 360.767 509.501C387.918 508.304 406.585 503.913 422.755 497.624C457.097 484.346 484.249 457.195 497.526 422.857C503.812 406.585 508.206 388.016 509.404 360.864C510.601 333.612 510.901 324.928 510.901 255.55C510.901 186.172 510.8 177.488 509.602 150.235ZM463.586 358.868C462.486 383.824 458.294 397.3 454.801 406.284C446.214 428.546 428.546 446.214 406.284 454.801C397.3 458.294 383.727 462.486 358.868 463.582C331.915 464.783 323.832 465.079 255.651 465.079C187.471 465.079 179.286 464.783 152.431 463.582C127.475 462.486 113.998 458.294 105.014 454.801C93.9361 450.706 83.8523 444.218 75.6675 435.733C67.1825 427.446 60.6939 417.464 56.5995 406.386C53.1057 397.402 48.9138 383.824 47.8181 358.969C46.6171 332.017 46.3208 323.929 46.3208 255.749C46.3208 187.568 46.6171 179.383 47.8181 152.532C48.9138 127.576 53.1057 114.1 56.5995 105.116C60.6939 94.0336 67.1825 83.9537 75.7689 75.765C84.0512 67.2799 94.0336 60.7914 105.116 56.7009C114.1 53.2071 127.677 49.0152 152.532 47.9156C179.485 46.7185 187.572 46.4182 255.749 46.4182C324.031 46.4182 332.114 46.7185 358.969 47.9156C383.925 49.0152 397.402 53.2071 406.386 56.7009C417.464 60.7914 427.548 67.2799 435.733 75.765C444.218 84.0512 450.706 94.0336 454.801 105.116C458.294 114.1 462.486 127.674 463.586 152.532C464.783 179.485 465.083 187.568 465.083 255.749C465.083 323.929 464.783 331.915 463.586 358.868Z"/>
+                        <path d="M255.55 124.281C183.08 124.281 124.281 183.076 124.281 255.55C124.281 328.024 183.08 386.819 255.55 386.819C328.024 386.819 386.819 328.024 386.819 255.55C386.819 183.076 328.024 124.281 255.55 124.281ZM255.55 340.701C208.535 340.701 170.399 302.569 170.399 255.55C170.399 208.531 208.535 170.399 255.55 170.399C302.569 170.399 340.701 208.531 340.701 255.55C340.701 302.569 302.569 340.701 255.55 340.701V340.701Z"/>
+                        <path d="M422.658 119.091C422.658 136.014 408.936 149.736 392.009 149.736C375.086 149.736 361.364 136.014 361.364 119.091C361.364 102.164 375.086 88.4458 392.009 88.4458C408.936 88.4458 422.658 102.164 422.658 119.091V119.091Z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/rlg.websites" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M75 512H242V330H182V270H242V195C242 153.645 275.645 120 317 120H392V180H332C315.457 180 302 193.457 302 210V270H389.293L379.293 330H302V512H437C478.355 512 512 478.355 512 437V75C512 33.6445 478.355 0 437 0H75C33.6445 0 0 33.6445 0 75V437C0 478.355 33.6445 512 75 512ZM30 75C30 50.1875 50.1875 30 75 30H437C461.812 30 482 50.1875 482 75V437C482 461.812 461.812 482 437 482H332V360H404.707L424.707 240H332V210H422V90H317C259.102 90 212 137.102 212 195V240H152V360H212V482H75C50.1875 482 30 461.812 30 437V75Z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
