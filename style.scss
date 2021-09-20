@@ -66,6 +66,10 @@ body {
                 color: $gris-claro;
                 margin-left: 2vw;
             }
+
+            a:hover {
+                opacity: 0.7;
+            }
         }
     }
 
@@ -88,14 +92,14 @@ body {
 
             h1 {
                 color: $gris-claro;
-                font-size: clamp(20px, 4vw, 50px);
+                font-size: clamp(20px, 6vw, 50px);
                 font-weight: $weight4;
                 padding-bottom: 1%;
             }
 
             p {
                 font-weight: $weight3;
-                font-size: clamp(12px, 2vw, 20px);
+                font-size: clamp(12px, 3vw, 20px);
                 color: rgba($color: #F1F1F1, $alpha: 0.5);
             }
 
@@ -113,7 +117,13 @@ body {
                     margin-right: 2%;
                     border: 3px solid $gris-claro;
                     font-weight: $weight3;
-                    font-size: clamp(11px, 1.8vw, 16px);
+                    font-size: clamp(11px, 2.5vw, 16px);
+                    transition: 0.4s ease all;
+                }
+
+                #button1:hover {
+                    opacity: 0.7;
+                    transition: 0.4s ease all;
                 }
 
                 #button2 {
@@ -123,6 +133,13 @@ body {
                     border-radius: 100px;
                     border: 3px solid $gris-claro;
                     font-size: clamp(11px, 1.8vw, 16px);
+                    font-weight: $weight3;
+                    transition: 0.4s ease all;
+                }
+
+                #button2:hover {
+                    opacity: 0.7;
+                    transition: 0.4s ease all;
                 }
             }
         }
@@ -151,9 +168,13 @@ body {
 
     svg {
         fill: $gris-claro;
-        width: clamp(70px, 20vw, 200px);
+        width: clamp(90px, 20vw, 200px);
         margin: 2rem 2rem;
         opacity: 1;
+    }
+
+    svg:hover {
+        opacity: 0.7;
     }
 }
 
@@ -170,12 +191,12 @@ body {
             justify-content: center;
     
             h1 {
-                font-size: 70px; /* 70px */
+                font-size: clamp(35px, 8vw, 70px); /* 40px, 8vw, 70px */
                 color: $gris-medio;
             }
     
             p {
-                font-size: 22px;
+                font-size: clamp(14px, 2.5vw, 22px); /* 15px, 2.5vw, 22px */
                 color: rgba($color: #7C7C7C, $alpha: 0.7);
             }
         }
@@ -203,13 +224,13 @@ body {
             justify-content: center;
     
             h1 {
-                font-size: 70px; /* 70px */
+                font-size: clamp(35px, 8vw, 70px);
                 color: $gris-medio;
                 text-align: right;
             }
     
             p {
-                font-size: 22px;
+                font-size: clamp(14px, 2.5vw, 22px);
                 color: rgba($color: #7C7C7C, $alpha: 0.7);
                 text-align: right;
             }
@@ -224,6 +245,97 @@ body {
             svg {
                 fill: url(#gradient);
                 width: 25vw;
+            }
+        }
+    }
+}
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $gris-claro;
+    padding: 10vh 5vw;
+
+    h1 {
+        font-size: clamp(40px, 9vw, 80px);
+        color: $rojo;
+        text-align: center;
+    }
+
+    .servicios-p {
+        padding: 0 10vw;
+    
+        p {
+            font-size: clamp(14px, 2.5vw, 22px);
+            color: rgba($color: #7C7C7C, $alpha: 0.7);
+            padding: 2.5vh 0;
+            text-align: center;
+        }
+    
+        ul {
+            color: $rojo;
+            font-weight: 600;
+            font-size: clamp(14px, 2.5vw, 22px);
+            padding-left: 1vw;
+            text-align: center;
+            list-style: none;
+        }
+    }
+    
+    .planes {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .plan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(76.05deg, #A25382 2.94%, #F26468 80.59%);
+            border-radius: 20px;
+            padding: 1% 0;
+            width: 450px;
+            margin: 4% 4% 0 4%;
+            box-shadow: 1px 1px 5px $gris-medio;
+
+            h1 {
+                font-size: clamp(30px, 5.5vw, 50px); /* 30px, 5.5vw, 50px */
+                padding: 5% 15% 3% 15%;
+                color: $gris-claro;
+                text-align: center;
+            }
+
+            p {
+                font-size: clamp(14px, 2.5vw, 17px); /* 14px, 2.5vw, 17px */
+                text-align: center;
+                padding: 0 5% 10% 5%;
+                color: rgba($color: #f1f1f1, $alpha: 0.7);
+            }
+
+            ul {
+                list-style: square;
+                padding: 0 15%;
+                font-size: clamp(14px, 2.5vw, 17px);
+
+                li {
+                    color: $gris-claro;
+                    z-index: 0;
+                }
+            }
+
+            a {
+                margin: 10% 0 5% 0;
+                text-decoration: none;
+                background-color: $gris-claro;
+                color: $morado;
+                padding: 10px 20px;
+                border-radius: 100px;
+                border: 3px solid $gris-claro;
+                font-weight: $weight3;
+                font-size: clamp(11px, 2.5vw, 16px);
             }
         }
     }
@@ -255,14 +367,19 @@ body {
                     background-repeat: no-repeat;
                     height: 20px;
                     width: 30px;
+                    cursor: pointer;
+                }
+
+                .toggler-image.active {
+                    background: url(images/burgirX.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 20px;
+                    width: 30px;
                 }
             }
 
             .nav-links {
-                transform: translateX(100%);
-            }
-
-            .active {
                 position: absolute;
                 display: flex;
                 flex-direction: column;
@@ -271,9 +388,9 @@ body {
                 height: 100vh;
                 width: 100%;
                 background-color: $gris-oscuro;
-                transform: translateX(0);
+                transform: translateX(100%);
                 transition: 0.4s ease all;
-    
+
                 a {
                     text-decoration: none;
                     color: $gris-claro;
@@ -281,6 +398,11 @@ body {
                     font-weight: $weight3;
                     padding: 2vh 0;
                 }
+            }
+
+            .active {
+                transform: translateX(0);
+                transition: 0.4s ease all;
             }
         }
 
@@ -315,6 +437,78 @@ body {
                     padding-top: 3%;
                     justify-content: center;
                 }
+            }
+        }
+    }
+
+    .nosotros {
+        padding-bottom: 0;
+
+        .nosotros-inverse {
+            padding-top: 5vh;
+        }
+    }
+
+    .servicios {
+
+        .servicios-p {
+            padding: 0;
+        }
+
+        .planes {
+            padding-top: 10vh;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .nosotros {
+
+        .nosotros-regular {
+            flex-direction: column;
+
+            .texto-nosotros {
+            
+                h1, p {
+                    text-align: center;
+                }
+            }
+
+            .svg-nosotros {
+                padding: 5vh 0;
+                
+                svg {
+                    width: 50vw;
+                }
+            }
+        }
+
+        .nosotros-inverse {
+            flex-direction: column;
+
+            .texto-nosotros {
+            
+                h1, p {
+                    text-align: center;
+                }
+            }
+
+            .svg-nosotros {
+                padding: 5vh 0;
+                
+                svg {
+                    width: 50vw;
+                }
+            }
+        }
+    }
+
+    .servicios {
+
+        .servicios-p {
+
+            ul {
+                list-style: square;
             }
         }
     }

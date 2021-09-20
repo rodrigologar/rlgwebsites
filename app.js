@@ -14,12 +14,16 @@ window.addEventListener("scroll", function () {
 
 function menuToggle() {
     const navLinks = document.getElementById("nav-links");
+    const togglerImage = document.getElementById("toggler-image");
 
     navLinks.classList.toggle("active");
+    togglerImage.classList.toggle("active");
 }
 
 function deToggle() {
     const navLinks = document.getElementById("nav-links");
+    const togglerImage = document.getElementById("toggler-image");
 
     navLinks.classList.remove("active");
+    togglerImage.classList.remove("active");
 }
