@@ -256,7 +256,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: $gris-claro;
-    padding: 15vh 5vw 0 5vw;
+    padding: 15vh 5vw 15vh 5vw;
 
     h1 {
         font-size: clamp(40px, 9vw, 80px);
@@ -343,6 +343,56 @@ body {
             a:hover {
                 opacity: 0.7;
                 transition: 0.4s ease all;
+            }
+        }
+    }
+}
+
+.clientes {
+    background: linear-gradient(76.05deg, #A25382 2.94%, #F26468 80.59%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $gris-claro;
+    padding: 15vh 5vw;
+
+    h1 {
+        font-size: clamp(40px, 9vw, 80px);
+        text-align: center;
+    }
+
+    .clientes_div {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .cliente {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            h2 {
+                font-size: clamp(20px, 3vw, 30px); /* 20px, 3vw, 30px */
+                padding: 5vh 0 2vh 0;
+                text-align: center;
+            }
+
+            img {
+                width: clamp(280px, 70vw, 770px); /* 280px, 70vw, 770px */
+                border-radius: .5em;
+                box-shadow: 1px 1px 5px $gris-oscuro;
+            }
+
+            a {
+                color: $gris-claro;
+                font-size: clamp(12px, 2.2vw, 20px); /* 12px, 2.2vw, 20px */
+                font-weight: $weight3;
+                padding-top: 2vh;
+            }
+
+            a:hover {
+                opacity: 0.5;
             }
         }
     }

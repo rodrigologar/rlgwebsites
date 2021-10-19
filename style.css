@@ -336,7 +336,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #f1f1f1;
-  padding: 15vh 5vw 0 5vw;
+  padding: 15vh 5vw 15vh 5vw;
 }
 
 .servicios h1 {
@@ -443,6 +443,79 @@ body {
   opacity: 0.7;
   -webkit-transition: 0.4s ease all;
   transition: 0.4s ease all;
+}
+
+.clientes {
+  background: linear-gradient(76.05deg, #A25382 2.94%, #F26468 80.59%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f1f1f1;
+  padding: 15vh 5vw;
+}
+
+.clientes h1 {
+  font-size: clamp(40px, 9vw, 80px);
+  text-align: center;
+}
+
+.clientes .clientes_div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.clientes .clientes_div .cliente {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clientes .clientes_div .cliente h2 {
+  font-size: clamp(20px, 3vw, 30px);
+  /* 20px, 3vw, 30px */
+  padding: 5vh 0 2vh 0;
+  text-align: center;
+}
+
+.clientes .clientes_div .cliente img {
+  width: clamp(280px, 70vw, 770px);
+  /* 280px, 70vw, 770px */
+  border-radius: .5em;
+  -webkit-box-shadow: 1px 1px 5px #3D3D3D;
+          box-shadow: 1px 1px 5px #3D3D3D;
+}
+
+.clientes .clientes_div .cliente a {
+  color: #f1f1f1;
+  font-size: clamp(12px, 2.2vw, 20px);
+  /* 12px, 2.2vw, 20px */
+  font-weight: 600;
+  padding-top: 2vh;
+}
+
+.clientes .clientes_div .cliente a:hover {
+  opacity: 0.5;
 }
 
 .contacto {
